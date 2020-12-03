@@ -1,5 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
+
 const Links = ({ styleClass, children }) => {
   return (
     <ul className={styleClass}>
@@ -28,4 +29,4 @@ const Links = ({ styleClass, children }) => {
   )
 }
 
-export default Links
+export default Links;
