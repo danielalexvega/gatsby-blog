@@ -12,6 +12,9 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      categories: allMdx {
+        distinct(field: frontmatter___category)
+      }
     }
   `)
 
@@ -20,8 +23,19 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/posts/${slug}`,
       component: path.resolve(`src/templates/post-template.js`),
       context: {
-        slug,
-      },
+        slug
+      }
     })
   })
+
+  result.data.categories.distinct.forEach((category) => {
+    createPage({
+      path: `/${category}`,
+      component: path.resolve(`src/templates/category-template.js`),
+      context: {
+        category
+      }
+    })
+  })
+
 }
