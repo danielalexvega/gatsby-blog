@@ -1,20 +1,13 @@
-import Layout from '../components/Layout'
-import Hero from '../components/Hero'
-import { FiInfo } from 'react-icons/fi'
-import { Link } from 'gatsby'
-import { Counter, LikeButton } from '../components/Complete'
+import Layout from '../components/Layout';
+import Hero from '../components/Hero';
+import { FiInfo } from 'react-icons/fi';
+import { Link } from 'gatsby';
+import { Counter, LikeButton, RegVideo, Video } from '../components/Complete';
 
 <Layout>
   <Hero />
 
 <section className="mdx-page">
-
-<div className="mdx-img">
-
-![nice image](../assets/gatsby-1.png)  
-
-</div>
-
 
 ## my first mdx file
 
@@ -67,6 +60,11 @@ const LikeButton = () => {
 ```
 
 <LikeButton />
+
+<h2>Video Components</h2>
+
+<RegVideo />
+<Video />
 
 <Link to="/posts" className="btn center-btn">
   Back to all posts.
