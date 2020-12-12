@@ -2,7 +2,7 @@ import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 
 const components = {
-  //all the logic
+
 
 }
 
