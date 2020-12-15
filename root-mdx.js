@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
-import { Headings, Blockquote, Code, Example } from './src/components/Complete';
+import { Headings, Blockquote, Code, PrismSetup } from './src/components/Complete';
 
 const Testing = ({ children }) => {
   return <code className="code">{children}</code>
@@ -14,7 +14,7 @@ const components = {
   h4: Headings.myH4,
   inlineCode: Code,
   blockquote: Blockquote,
-  pre: Example
+  pre: PrismSetup
 }
 
 export const wrapMDX = ({ element }) => {

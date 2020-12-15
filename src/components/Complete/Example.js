@@ -2,18 +2,13 @@ import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/vsDark';
 
-const exampleCode = `
-(function someDemo() {
-  var test = "Hello World!";
-  console.log(test);
-})();
+const Example = (props) => {
+  const code = props.children.props.children.trim();
+  const language = props.children.props.className.split('-')[1];
+  //const language = props.children.props.className.replace(/language-/, '')
 
-return () => <App />;
-`;
-
-const Example = () => {
   return (
-    <Highlight {...defaultProps} code={exampleCode} language="jsx">
+    <Highlight {...defaultProps} code={code} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={style}>
           {tokens.map((line, i) => (
