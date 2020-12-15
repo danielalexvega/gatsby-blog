@@ -1,22 +1,19 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
+import { Headings, Blockquote, Code } from './src/components/Complete';
 
-
-const myH2 = props => {
-  if (props.title) {
-    return <h2 {...props} style={{ fontSize: "2rem", color: "red" }}>{props.children}</h2>
-  }
-  return <h2 {...props} className='code'>{props.children}</h2>
+const Testing = ({ children }) => {
+  return <code className="code">{children}</code>
 }
-
-
 
 // You can rewrite html elements. Or, you can define special html elements in a sense... 
 // You are the "king of the castle"
 
 const components = {
-  h2: myH2
-
+  h2: Headings.myH2,
+  h4: Headings.myH4,
+  inlineCode: Code,
+  blockquote: Blockquote
 }
 
 export const wrapMDX = ({ element }) => {
