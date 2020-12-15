@@ -87,6 +87,64 @@ The times we live in require us to think critically: to second-guess, to interro
 The times we live in require us to think critically: to second-guess, to interrogate, to fact-check, and to doubt. Anything less, and our entire worldview will be determined by whatever story is spun in our general direction. To be a sentient human in 2020 is to resist the mythology being written all around us and understand that most things are too complex to be the story of one Great Man changing the course of history. But how the hell, then, are we supposed to understand someone like LeBron James?
 </blockquote>
 
+#### Javascript
+
+```js
+// comments
+const name = "john"
+const channel = "coding addict"
+
+function featuredProducts(data) {
+  return data.filter(item => {
+    return item.featured === true
+  })
+}
+featuredProducts()
+```
+
+#### JSX
+
+```jsx
+import React from "react"
+
+const Counter = () => {
+  const [count, setCount] = React.useState(0)
+  return (
+    <section className="counter">
+      <h4>show some love to MDX</h4>
+      <h4>likes {count}</h4>
+      <button className="btn btn-danger" onClick={() => setCount(count + 1)}>
+        i like mdx
+      </button>
+    </section>
+  )
+}
+export default Counter
+```
+
+#### HTML
+
+```html
+<h1>hello world</h1>
+<p class="random">random text</p>
+<section class="contact">
+  <div class="title">
+    <h1>contact us</h1>
+  </div>
+</section>
+```
+
+#### CSS
+
+```css
+max-width: 500px;
+border-radius: var(--radius);
+padding: 1rem 1.5rem;
+background: var(--clr-grey-10);
+text-align: center;
+```
+
+
 
 
 
