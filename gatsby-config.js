@@ -1,4 +1,12 @@
 module.exports = {
+  siteMetadata: {
+    title: `Gatsby MDX Blog`,
+    description: `A Gatsby MDX Blog focusing on JavaScript, Gatsby, and other Full Stack ideas`,
+    titleTemplate: `%s | Full Court Press`,
+    url: `https://fullcourtpressblog.netlify.app/`,
+    image: `mainImg.png`,
+    twitterUsername: `@zlamdanielvega`
+  },
   plugins: [
     // `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
