@@ -1,15 +1,18 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
+import SEO from '../components/SEO';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import Banner from '../components/Banner';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
+
 const PostTemplate = ({ data }) => {
   const { mdx: { frontmatter: { title, category, image, date }, body } } = data;
   return <Layout>
+    <SEO title={title} />
     <Hero />
     <Wrapper>
       {/* Post Info  */}
